@@ -15,6 +15,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 import LoadingScreen from "@/components/LoadingScreen";
 import CustomCursor from "@/components/CustomCursor";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
       
       <Footer />
       <BackToTop />
+      <WhatsAppButton />
     </main>
   );
 }
