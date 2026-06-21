@@ -22,85 +22,106 @@ export default function Navigation() {
   };
 
   const navLinks = [
-    { nameEn: "Home", nameAr: "الرئيسية", id: "home" },
-    { nameEn: "Services", nameAr: "خدماتنا", id: "services" },
-    { nameEn: "Gallery", nameAr: "معرض أعمالنا", id: "gallery" },
-    { nameEn: "Reviews", nameAr: "آراء عملائنا", id: "reviews" },
-    { nameEn: "Contact", nameAr: "تواصل", id: "contact" },
+    { nameEn: "Home",     nameAr: "الرئيسية",      id: "home" },
+    { nameEn: "Services", nameAr: "خدماتنا",        id: "services" },
+    { nameEn: "Gallery",  nameAr: "معرض أعمالنا",   id: "gallery" },
+    { nameEn: "Reviews",  nameAr: "آراء عملائنا",   id: "reviews" },
+    { nameEn: "Contact",  nameAr: "تواصل",           id: "contact" },
   ];
 
   const linkClass = scrolled
     ? "text-foreground hover:text-primary"
     : "text-white/90 hover:text-primary drop-shadow-sm";
 
-  const logoTextClass = scrolled ? "text-foreground" : "text-white/90 drop-shadow-sm";
+  const logoSubClass = scrolled
+    ? "text-foreground"
+    : "text-white/90 drop-shadow-sm";
 
   return (
     <nav
+      data-testid="navigation"
       className={`fixed top-0 w-full z-40 transition-all duration-500 ${
         scrolled
           ? "bg-background/90 backdrop-blur-md border-b border-primary/30 py-3 shadow-md"
-          : "bg-gradient-to-b from-black/50 to-transparent py-5"
+          : "bg-gradient-to-b from-black/55 to-transparent py-5"
       }`}
-      data-testid="navigation"
     >
-      <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        {/* Left Links (English) */}
-        <div className="hidden md:flex gap-6 items-center flex-1">
+      {/* ── Desktop layout: 3-column grid ── */}
+      <div className="hidden md:grid grid-cols-3 items-center px-8 max-w-screen-xl mx-auto">
+
+        {/* Col 1 — English links (left) */}
+        <div className="flex gap-6 items-center">
           {navLinks.map((link) => (
             <button
               key={`en-${link.id}`}
               onClick={() => scrollTo(link.id)}
               data-testid={`nav-en-${link.id}`}
-              className={`text-sm font-sans tracking-wide transition-colors duration-300 uppercase font-medium ${linkClass}`}
+              className={`text-xs font-sans tracking-widest uppercase font-medium transition-colors duration-300 ${linkClass}`}
             >
               {link.nameEn}
             </button>
           ))}
         </div>
 
-        {/* Logo */}
+        {/* Col 2 — Logo (center) */}
         <div
-          className="flex flex-col items-center flex-shrink-0 cursor-pointer"
+          className="flex flex-col items-center cursor-pointer"
           onClick={() => scrollTo("home")}
           data-testid="nav-logo"
         >
-          <span className="font-serif text-3xl md:text-4xl text-primary leading-none">M</span>
-          <span className={`font-serif text-[10px] tracking-[0.2em] mt-1 transition-colors duration-300 ${logoTextClass}`}>
-            VELVET MOMENTUM SALON
+          <span className="font-serif text-4xl text-primary leading-none">M</span>
+          <span className={`font-serif text-[9px] tracking-[0.25em] mt-1 uppercase transition-colors duration-300 ${logoSubClass}`}>
+            Velvet Momentum Salon
           </span>
-          <span className={`font-cairo text-[10px] mt-0.5 transition-colors duration-300 ${logoTextClass}`} dir="rtl">
+          <span className={`font-cairo text-[9px] mt-0.5 transition-colors duration-300 ${logoSubClass}`} dir="rtl">
             صالون الزخم المخملي
           </span>
         </div>
 
-        {/* Right Links (Arabic) */}
-        <div className="hidden md:flex gap-6 items-center flex-1 justify-end" dir="rtl">
+        {/* Col 3 — Arabic links (right) */}
+        <div className="flex gap-6 items-center justify-end" dir="rtl">
           {navLinks.map((link) => (
             <button
               key={`ar-${link.id}`}
               onClick={() => scrollTo(link.id)}
               data-testid={`nav-ar-${link.id}`}
-              className={`text-sm font-tajawal font-medium transition-colors duration-300 ${linkClass}`}
+              className={`text-xs font-tajawal font-medium transition-colors duration-300 ${linkClass}`}
             >
               {link.nameAr}
             </button>
           ))}
         </div>
+      </div>
 
-        {/* Mobile Menu Toggle */}
+      {/* ── Mobile layout ── */}
+      <div className="md:hidden relative flex items-center justify-center px-4">
+        {/* Logo — absolutely centered */}
+        <div
+          className="flex flex-col items-center cursor-pointer"
+          onClick={() => scrollTo("home")}
+          data-testid="nav-logo-mobile"
+        >
+          <span className="font-serif text-3xl text-primary leading-none">M</span>
+          <span className={`font-serif text-[8px] tracking-[0.2em] mt-0.5 uppercase transition-colors duration-300 ${logoSubClass}`}>
+            Velvet Momentum Salon
+          </span>
+        </div>
+
+        {/* Hamburger — pinned right */}
         <button
-          className={`md:hidden transition-colors duration-300 hover:text-primary ${scrolled ? "text-foreground" : "text-white"}`}
+          className={`absolute right-4 transition-colors duration-300 hover:text-primary ${
+            scrolled ? "text-foreground" : "text-white"
+          }`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           data-testid="nav-mobile-toggle"
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ── Mobile dropdown ── */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-primary/20 shadow-lg md:hidden py-4 flex flex-col gap-2 px-6">
+        <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-primary/20 shadow-lg py-3 flex flex-col px-6">
           {navLinks.map((link) => (
             <button
               key={`mobile-${link.id}`}
