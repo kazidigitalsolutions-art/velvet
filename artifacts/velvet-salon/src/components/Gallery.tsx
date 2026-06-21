@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-import p1 from "@assets/p1_1782050469508.jpg";
-import p2 from "@assets/p2_1782050469507.jpg";
-import p3 from "@assets/p3_1782050469507.jpg";
-import p4 from "@assets/p4_1782050469506.jpg";
-import p5 from "@assets/p5_1782050469506.jpg";
-import p6 from "@assets/p6_1782050469505.jpg";
-import p7 from "@assets/p7_1782050469504.jpg";
-import p8 from "@assets/3_1782050503373.jpg";
+import g1 from "@assets/3_1782051224636.jpg";
+import g2 from "@assets/12_1782051224639.jpg";
+import g3 from "@assets/4_1782051224641.jpg";
+import g4 from "@assets/5_1782051224641.jpg";
+import g5 from "@assets/6_1782051224642.jpg";
+import g6 from "@assets/1_1782051224642.jpg";
 
-const images = [p1, p2, p3, p4, p5, p6, p7, p8];
+const images = [g1, g2, g3, g4, g5, g6];
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
