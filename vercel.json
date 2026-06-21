@@ -1,7 +1,7 @@
 {
   "buildCommand": "pnpm --filter @workspace/velvet-salon run build:vercel",
   "outputDirectory": "artifacts/velvet-salon/dist",
-  "installCommand": "pnpm install --frozen-lockfile",
+  "installCommand": "pnpm install",
   "framework": null,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
