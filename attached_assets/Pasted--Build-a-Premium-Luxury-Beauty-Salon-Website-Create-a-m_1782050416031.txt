@@ -1,0 +1,481 @@
+# Build a Premium Luxury Beauty Salon Website
+
+Create a modern, luxury, high-converting, fully responsive bilingual (Arabic-first with English support) website for a beauty salon business.
+
+## Business Information
+
+Business Name:
+VELVET MOMENTUM SALON
+(Arabic: صالون الزخم المخملي للتزيين النسائي)
+
+Phone:
++966 55 866 6543
+
+Address:
+الفلاح، طريق أبو علي، مخطط عبد اللطيف جميل، الجبيل 35514، المملكة العربية السعودية
+
+Instagram:
+https://www.instagram.com/velvet.momentum.salon/
+
+Google Reviews:
+89+ Reviews
+
+Industry:
+Luxury Beauty Salon
+
+Target Audience:
+Women seeking premium beauty, hair, nail, makeup, skincare, and self-care services.
+
+---
+
+# Design Direction
+
+Create an elegant, premium, feminine, luxury brand experience.
+
+## Color Palette
+
+Primary:
+#D4AF37 (Luxury Gold)
+
+Secondary:
+#F8EDEB (Soft Blush)
+
+Accent:
+#C48A8A (Dusty Rose)
+
+Dark:
+#1C1C1C
+
+Background:
+#FFFDFB
+
+Text:
+#3B3B3B
+
+Use tasteful gradients between blush, rose, and gold.
+
+Avoid bright colors.
+
+The overall feeling should be:
+Luxury
+Elegant
+Premium
+Modern
+Sophisticated
+Instagram-worthy
+
+---
+
+# Typography
+
+Use premium Google Fonts:
+
+Arabic:
+Cairo
+Tajawal
+
+English:
+Playfair Display
+Poppins
+
+Headings:
+Playfair Display
+
+Body:
+Poppins
+
+Arabic headings:
+Cairo Bold
+
+Arabic body:
+Tajawal
+
+---
+
+# Technical Requirements
+
+Use:
+
+React + TypeScript
+Tailwind CSS
+Framer Motion
+Lucide Icons
+
+SEO optimized
+
+Responsive for:
+Desktop
+Tablet
+Mobile
+
+Fast loading
+
+Modern animations
+
+Accessible design
+
+Smooth scrolling
+
+Sticky navigation
+
+Premium hover effects
+
+Subtle parallax sections
+
+Luxury card animations
+
+Scroll reveal animations
+
+Page transitions
+
+Glassmorphism effects where appropriate
+
+---
+
+# Website Structure
+
+## 1. Hero Section
+
+Full-screen luxury hero.
+
+Background:
+Elegant beauty salon imagery with subtle overlay.
+
+Headline:
+
+English:
+"Where Beauty Meets Luxury"
+
+Arabic:
+"حيث يلتقي الجمال بالفخامة"
+
+Subheadline:
+Experience premium beauty services tailored for your unique style.
+
+Buttons:
+
+Book Appointment
+Contact Us
+
+Animated floating beauty elements.
+
+Luxury entrance animations.
+
+---
+
+## 2. About Us
+
+Elegant two-column layout.
+
+Tell the story:
+
+Velvet Momentum Salon is dedicated to providing exceptional beauty experiences in a luxurious and welcoming environment.
+
+Highlight:
+
+Professional Team
+
+Premium Products
+
+Luxury Experience
+
+Personalized Service
+
+Show statistics:
+
+89+ Reviews
+
+100% Client Satisfaction
+
+Premium Beauty Services
+
+---
+
+## 3. Services Section
+
+Luxury service cards.
+
+Categories:
+
+Hair Styling
+
+Hair Coloring
+
+Hair Treatments
+
+Makeup
+
+Nail Care
+
+Manicure & Pedicure
+
+Facial Treatments
+
+Eyebrow & Lash Services
+
+Bridal Packages
+
+Spa & Relaxation Services
+
+Each service card should have:
+
+Icon
+
+Image placeholder
+
+Description
+
+Elegant hover animation
+
+---
+
+## 4. Why Choose Us
+
+Create premium feature cards.
+
+Features:
+
+Expert Beauty Specialists
+
+Luxury Environment
+
+High-Quality Products
+
+Personalized Consultation
+
+Exceptional Customer Care
+
+Latest Beauty Trends
+
+Animated icons.
+
+---
+
+## 5. Gallery
+
+Instagram-style luxury gallery.
+
+Masonry layout.
+
+Hover zoom effects.
+
+Lightbox gallery.
+
+Ability to easily replace images with actual Instagram content later.
+
+---
+
+## 6. Customer Reviews
+
+Luxury testimonials carousel.
+
+Display:
+
+★★★★★
+
+Review snippets
+
+Elegant card design.
+
+Mention:
+
+Trusted by clients with 89+ reviews.
+
+Animated slider.
+
+---
+
+## 7. Instagram Section
+
+Large elegant section.
+
+Heading:
+
+Follow Our Beauty Journey
+
+Embed Instagram profile link.
+
+Display social cards.
+
+CTA button:
+
+Visit Instagram
+
+---
+
+## 8. Booking CTA Section
+
+Luxury banner.
+
+Text:
+
+Ready For Your Next Beauty Transformation?
+
+Buttons:
+
+Call Now
+
+Book Appointment
+
+WhatsApp
+
+---
+
+## 9. Contact Section
+
+Display:
+
+Phone:
++966558666543
+
+Instagram:
+https://www.instagram.com/velvet.momentum.salon/
+
+Address:
+الفلاح، طريق أبو علي، مخطط عبد اللطيف جميل، الجبيل 35514
+
+Include:
+
+Google Maps embed
+
+Contact form
+
+Name
+
+Phone
+
+Service
+
+Message
+
+---
+
+## 10. Footer
+
+Luxury footer.
+
+Include:
+
+Logo
+
+Quick Links
+
+Services
+
+Instagram
+
+Phone
+
+Address
+
+Copyright
+
+Social icons
+
+---
+
+# Advanced Features
+
+Add:
+
+Luxury cursor effects
+
+Animated gradients
+
+Floating decorative elements
+
+Scroll progress indicator
+
+Reveal-on-scroll animations
+
+Smooth page transitions
+
+Loading animation with salon logo
+
+Back-to-top button
+
+Micro-interactions
+
+Elegant shadows
+
+Glassmorphism cards
+
+Premium hover states
+
+---
+
+# SEO
+
+Optimize for:
+
+Beauty Salon in Jubail
+
+Women's Beauty Salon Jubail
+
+Hair Salon Jubail
+
+Nail Salon Jubail
+
+Luxury Beauty Salon Saudi Arabia
+
+صالون نسائي الجبيل
+
+صالون تجميل الجبيل
+
+صالون شعر الجبيل
+
+Include:
+
+Meta titles
+
+Meta descriptions
+
+Open Graph tags
+
+Structured data
+
+Local business schema
+
+---
+
+# Performance
+
+Optimize images
+
+Lazy loading
+
+Code splitting
+
+Excellent Lighthouse score
+
+Mobile-first design
+
+---
+
+# Deliverables
+
+Generate:
+
+Complete React project
+
+All pages
+
+All components
+
+Tailwind configuration
+
+Animations
+
+Responsive layouts
+
+SEO setup
+
+Contact form
+
+Instagram section
+
+Google Maps integration
+
+Professional production-ready code
+
+Make the final result look comparable to premium luxury salon brands and high-end beauty websites.

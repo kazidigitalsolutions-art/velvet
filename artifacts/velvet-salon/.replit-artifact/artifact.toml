@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Velvet Momentum Salon"
+version = "1.0.0"
+id = "artifacts/velvet-salon"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19496
+
+[services.development]
+run = "pnpm --filter @workspace/velvet-salon run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/velvet-salon", "run", "build" ]
+publicDir = "artifacts/velvet-salon/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19496"
+BASE_PATH = "/"
