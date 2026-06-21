@@ -28,10 +28,23 @@ export default function Contact() {
   });
 
   const onSubmit = (data: FormValues) => {
-    console.log("Form data:", data);
+    const lines = [
+      "🌸 *طلب حجز موعد - Velvet Momentum Salon*",
+      "",
+      `👤 *الاسم / Name:* ${data.name}`,
+      `📞 *رقم الهاتف / Phone:* ${data.phone}`,
+      `💅 *الخدمة / Service:* ${data.service}`,
+      data.message ? `💬 *ملاحظات / Message:* ${data.message}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const url = `https://wa.me/966558666543?text=${encodeURIComponent(lines)}`;
+    window.open(url, "_blank");
+
     toast({
-      title: "تم إرسال رسالتك / Message sent!",
-      description: "We will get back to you shortly. / سنتواصل معك قريباً.",
+      title: "جاري فتح واتساب / Opening WhatsApp…",
+      description: "سيتم فتح واتساب مع تفاصيل حجزك.",
     });
     form.reset();
   };
